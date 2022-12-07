@@ -1,0 +1,44 @@
+#######################################################################
+### Every thing to be configured on a Snakemake workflow global scale ##
+##
+## Run FASTQC on ATACseq samples
+# Author: Aristides ZONON
+# AFFILIATION: Clermont Auvergne University
+# CONTACT: aristides.zonon@etu.uca.fr
+## CREATED: 01-12-2022
+## LICENSE: GPL3
+
+################################################
+
+
+## Mus musculus References
+# genome fasta
+genome_fasta: /home/ubuntu/atacseq/data/reference/Mus_musculus_GRCm39/fasta/all.fasta
+
+# bowtie2 index
+idx_bt2: /home/ubuntu/atacseq/data/reference/Mus_musculus_GRCm39/bowtie2l
+
+
+samples:
+ ss_50k_0h_R1_1: data/data/subset/ss_50k_0h_R1_1.fastq.gz
+ ss_50k_0h_R1_2: data/data/subset/ss_50k_0h_R1_2.fastq.gz
+ ss_50k_0h_R2_1: data/data/subset/ss_50k_0h_R2_1.fastq.gz
+ ss_50k_0h_R2_2: data/data/subset/ss_50k_0h_R2_2.fastq.gz
+ ss_50k_0h_R3_1: data/data/subset/ss_50k_0h_R3_1.fastq.gz
+ ss_50k_0h_R3_2: data/data/subset/ss_50k_0h_R3_2.fastq.gz
+ ss_50k_24h_R1_1: data/data/subset/ss_50k_24h_R1_1.fastq.gz
+ ss_50k_24h_R1_2: data/data/subset/ss_50k_24h_R1_2.fastq.gz
+ ss_50k_24h_R2_1: data/data/subset/ss_50k_24h_R2_1.fastq.gz
+ ss_50k_24h_R2_2: data/data/subset/ss_50k_24h_R2_2.fastq.gz
+ ss_50k_24h_R3_1: data/data/subset/ss_50k_24h_R3_1.fastq.gz
+ ss_50k_24h_R3_2: data/data/subset/ss_50k_24h_R3_2.fastq.gz
+
+subsamples:
+ 50k_0h_R1: data/data/subset/ss_50k_0h_R1
+ 50k_0h_R2: data/data/subset/ss_50k_0h_R2
+ 50k_0h_R3: data/data/subset/ss_50k_0h_R3
+ 50k_24h_R1: data/data/subset/ss_50k_24h_R1
+ 50k_24h_R2: data/data/subset/ss_50k_24h_R2
+ 50k_24h_R3: data/data/subset/ss_50k_24h_R3
+
+

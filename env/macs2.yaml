@@ -1,0 +1,10 @@
+channels:
+- bioconda
+- conda-forge
+- default
+dependencies:
+- macs2==2.1.2
+- python==2.7.9 
+- numpy==1.9.2 
+- cython==0.25.2 
+
